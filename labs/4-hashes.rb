@@ -29,4 +29,21 @@ bitcoin = gets.chomp
 bitcoin = bitcoin.to_f
 
 # 3. inspect the bitcoin_data hash
-# puts bitcoin_data
+puts bitcoin_data
+
+# write user entered # or bitcoin to screen
+puts "you have #{bitcoin} bitcoin."
+
+# write the algo
+
+# set rate/price from hash to memory
+rate = bitcoin_data["bpi"]["USD"]["rate_float"]
+
+# write rate/price of 1 btc to screen
+puts "1 bitcoin is worth #{rate} USD"
+
+# set value of user entered btc in usd to memory
+value_in_usd = rate * bitcoin
+
+# write value in usd of user entered btc to screen
+puts "you have #{value_in_usd} worth of bitcoin!"
